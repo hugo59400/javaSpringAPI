@@ -13,6 +13,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
     public List<User> listAllUser() {
+
         return userRepository.findAll();
     }
 
@@ -21,6 +22,7 @@ public class UserService {
     }
 
     public User getUser(Integer id) {
+System.out.println(userRepository);
         return userRepository.findById(id).get();
     }
 
