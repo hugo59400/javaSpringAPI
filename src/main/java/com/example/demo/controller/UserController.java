@@ -38,7 +38,7 @@ public class UserController {
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody User user, @PathVariable Integer id) {
         try {
-            User existUser = userService.getUser(id);
+            // User existUser = userService.getUser(id);
             user.setId(id);
             userService.saveUser(user);
             return new ResponseEntity<>(HttpStatus.OK);
