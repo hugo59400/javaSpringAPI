@@ -20,7 +20,7 @@ public class UserController {
     public List<User> list() {
         return userService.listAllUser();
     }
-
+ 
     @GetMapping("/{id}")
     public ResponseEntity<User> get(@PathVariable Integer id) {
         try {
